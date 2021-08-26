@@ -1,0 +1,52 @@
+{
+  "name": "kylee-cli",
+  "version": "1.0.0",
+  "description": "A tool can help developers build project firstly",
+  "main": "index.js",
+  "bin": {
+    "kylee": "bin/kylee"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyleezhang/kylee-cli.git"
+  },
+  "keywords": [
+    "kylee-cli",
+    "cli"
+  ],
+  "author": "kyleezhang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kyleezhang/kylee-cli/issues"
+  },
+  "homepage": "https://github.com/kyleezhang/kylee-cli#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-angular": "^13.1.0",
+    "@typescript-eslint/eslint-plugin": "^4.29.3",
+    "@typescript-eslint/parser": "^4.29.3",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.1",
+    "husky": "^4.3.0",
+    "lint-staged": "^11.1.2",
+    "typescript": "^4.3.5"
+  },
+  "lint-staged": {
+    "src/**/*.{js, ts}": [
+      "eslint src --ext '.ts,.js' --fix"
+    ]
+  },
+  "husky": {
+    "pre-commit": "lint-staged",
+    "commit-msg": "commitlint -e $GIT_PARAMS"
+  },
+  "dependencies": {
+    "@types/node": "^16.7.1",
+    "save-dev": "0.0.1-security"
+  }
+}

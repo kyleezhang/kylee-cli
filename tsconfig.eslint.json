@@ -1,0 +1,9 @@
+{
+    "include": [
+        "bin",
+        "lib"
+    ],
+    "compilerOptions": {
+        "strict": true
+    },
+}

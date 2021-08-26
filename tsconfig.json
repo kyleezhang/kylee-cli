@@ -1,0 +1,45 @@
+{
+    "include": [
+        "src/**/*.{ts,js}",
+        "bin/*.js"
+    ],
+    "exclude": [
+        "node_modules",
+        "lib"
+    ],
+    "compilerOptions": {
+        "target": "ES5",
+        "module": "CommonJS",
+        "moduleResolution": "node",
+        "baseUrl": ".",
+        "lib": [
+            "ES6"
+        ],
+        "paths": {
+            "@/*": ["src/*"]
+        },
+        "allowJs": true,
+        "checkJs": true,
+        "outDir": "./lib",
+        "rootDir": ".",
+        "declaration": true,
+        "declarationDir": "./typings",
+        "typeRoots": [
+            "node_modules/@types"
+        ],
+        "types": [
+            "node"
+        ],
+        "strict": true,
+        "alwaysStrict": true,
+        "strictNullChecks": true,
+        "strictPropertyInitialization": true,
+        "strictBindCallApply": true,
+        "noImplicitAny": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitThis": true,
+        "esModuleInterop": true
+    }
+}
